@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Schedule</title>
+<head>
+ <meta charset="utf-8">
+ <meta id="testViewport" name="viewport" content="width=device-width, initial-scale=0.34">
+ <script src="https://kit.fontawesome.com/855d1ce94d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="cs1.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+
+<style>
+
+ *{
+ box-sizing:border-box;
+ }
+ .mainmenu{
+ z-index:1;
+ background:#2c2c54;
+ height:80px;
+ }
+
+.menu1{
+margin-left:80px;
+font-weight:bold;
+font-size:20px;
+}
+
+.logo{
+position:relative;
+left:100px;
+top:0px;
+}
+
+ @media(min-width: 770px) and (max-width: 1300px){
+ 
+  .menu1{
+  margin-left:1px;
+  }
+   .logo{
+  left:70px;
+  }
+  }
+</style>
+
+</head>
+
+
+<body class="anim1" style="height:1400px;background:#f6f6f9;overflow-x:hidden;">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top mainmenu">
+  <a class="navbar-brand ml-3 rounded-circle bg-white text-dark pl-4 pr-4" style="font-weight:bold;font-size:40px;cursor:pointer;" onclick="openNav()" href="#">A</a>
+      <ul class="navbar-nav nav-tabs" role="tablist" style="border-bottom:0px">
+    <li class="nav-item menu1">
+      <a class="nav-link bg-transparent" data-toggle="tab" href="home.html" style="padding-left:40px;padding-right:40px;color:#ffffff;">Home</a>
+    </li>
+    <li class="nav-item menu1">
+      <a class="nav-link bg-transparent " data-toggle="tab" href="class work.html" style="padding-left:40px;padding-right:40px;color:#ffffff;">Class Work</a>
+    </li>
+	    <li class="nav-item menu1">
+      <a class="nav-link bg-transparent" data-toggle="tab" href="schedule.html" style="padding-left:40px;padding-right:40px;color:#ffffff;border: 1px solid #ffffff;background:transparent;">Schedule</a>
+    </li>
+		    <li class="nav-item menu1">
+      <a class="nav-link bg-transparent  data-toggle="tab" href="#analytics" style="padding-left:40px;padding-right:40px;color:#ffffff;">Analytics</a>
+    </li>
+  </ul>
+  <span class="navbar-brand logo">
+   <img src="https://i.imgur.com/4RHFSoI.jpg" width="86px" height="80px">
+  </span>
+</nav>
+<div id="mySidenav" class="sidenav">
+<div class="div1"></div>
+<div class="div3"></div>
+<div class="div2"><span class="spn55" id="name55">name</span></div>
+<span style="position:absolute;left:1px;top:0px;">
+  </span>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top:0px;">&times;</a>
+  <a href="setting.html" style="position: relative; top:300px"><span class="fa fa-cog" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting</a>
+  <a href="account.html" style="position: relative; top:330px"><span class="fa fa-user" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account</a>
+  <a href="#" style="position: relative; top:360px"><span class="fa fa-id-card" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us</a>
+   <a href="version.html" style="position: relative; top:390px"><span class="fa fa-external-link" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version</a>
+  <a href="javascript:void(0)" onclick="logOut()" style="position: relative; top:420px"><span class=" fa fa-sign-out" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log out</a>
+ 
+
+</div>
+
+<div class="container">
+  <div class="calendar">
+    <div class="month">
+      <i class="fas fa-angle-left prev"></i>
+      <div class="date">
+        <h1></h1>
+        <p></p>
+      </div>
+      <i class="fas fa-angle-right next"></i>
+    </div>
+    <div class="weekdays">
+      <div>Sun</div>
+      <div>Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+    </div>
+    <div class="days"></div>
+  </div>
+</div>		 
+
+<script src="js1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Analytics</title>
+
+<head>
+  <meta charset="utf-8">
+  <meta id="testViewport" name="viewport" content="width=device-width, initial-scale=0.34">
+
+  <script src="https://kit.fontawesome.com/855d1ce94d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="cs1.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js1.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .mainmenu {
+      z-index: 1;
+      background: #2c2c54;
+      height: 80px;
+    }
+
+    .menu1 {
+      margin-left: 80px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .logo {
+      position: relative;
+      left: 100px;
+      top: 0px;
+    }
+
+    .top {
+      margin-top: 15vh;
+    }
+
+    .parent {
+      height: 500px;
+      width: 300px;
+      position: relative;
+    }
+
+    .child {
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    p {
+      text-align: center;
+      font-weight: bold;
+      font-size: medium;
+    }
+
+    @media(min-width: 770px) and (max-width: 1300px) {
+
+      .menu1 {
+        margin-left: 1px;
+      }
+
+      .logo {
+        left: 70px;
+      }
+    }
+  </style>
+
+</head>
+
+
+<body class="anim1">
+
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top mainmenu">
+    <a class="navbar-brand ml-3 rounded-circle bg-white text-dark pl-4 pr-4"
+      style="font-weight:bold;font-size:40px;cursor:pointer;" onclick="openNav()" href="#">A</a>
+    <ul class="navbar-nav nav-tabs" role="tablist" style="border-bottom:0px">
+      <li class="nav-item menu1">
+        <a class="nav-link bg-transparent" data-toggle="tab" href="home.html"
+          style="padding-left:40px;padding-right:40px;color:#ffffff;">Home</a>
+      </li>
+      <li class="nav-item menu1">
+        <a class="nav-link bg-transparent " data-toggle="tab" href="class work.html"
+          style="padding-left:40px;padding-right:40px;color:#ffffff;">Class Work</a>
+      </li>
+      <li class="nav-item menu1">
+        <a class="nav-link bg-transparent" data-toggle="tab" href="schedule.html"
+          style="padding-left:40px;padding-right:40px;color:#ffffff;">Schedule</a>
+      </li>
+      <li class="nav-item menu1">
+        <a class="nav-link bg-transparent" data-toggle="tab" href="#analytics"
+          style="padding-left:40px;padding-right:40px;color:#ffffff;border: 1px solid #ffffff;background:transparent;">Analytics</a>
+      </li>
+    </ul>
+    <span class="navbar-brand logo">
+      <img src="https://i.imgur.com/4RHFSoI.jpg" width="86px" height="80px">
+    </span>
+  </nav>
+  <div id="mySidenav" class="sidenav">
+    <div class="div1"></div>
+    <div class="div3"></div>
+    <div class="div2"><span class="spn55" id="name55">name</span></div>
+    <span style="position:absolute;left:1px;top:0px;">
+    </span>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top:0px;">&times;</a>
+    <a href="setting.html" style="position: relative; top:300px"><span class="fa fa-cog"
+        style="position:absolute;top:0px;font-size:65px"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting</a>
+    <a href="account.html" style="position: relative; top:330px"><span class="fa fa-user"
+        style="position:absolute;top:0px;font-size:65px"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account</a>
+    <a href="#" style="position: relative; top:360px"><span class="fa fa-id-card"
+        style="position:absolute;top:0px;font-size:65px"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About
+      Us</a>
+    <a href="version.html" style="position: relative; top:390px"><span class="fa fa-external-link"
+        style="position:absolute;top:0px;font-size:65px"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version</a>
+    <a href="javascript:void(0)" onclick="logOut()" style="position: relative; top:420px"><span class=" fa fa-sign-out"
+        style="position:absolute;top:0px;font-size:65px"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log
+      out</a>
+
+
+  </div>
+
+  <div class="containerp">
+    <div class="container-fluid">
+      <div class="row top">
+        <div class="col-5 parent">
+          <p>Student Attendace</p>
+          <div class="dropdown child">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Roll No.
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <button class="dropdown-item" type="button">1</button>
+              <button class="dropdown-item" type="button">2</button>
+              <button class="dropdown-item" type="button">3</button>
+              <button class="dropdown-item" type="button">4</button>
+              <button class="dropdown-item" type="button">5</button>
+              <button class="dropdown-item" type="button">6</button>
+              <button class="dropdown-item" type="button">7</button>
+              <button class="dropdown-item" type="button">8</button>
+              <button class="dropdown-item" type="button">9</button>
+              <button class="dropdown-item" type="button">10</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <canvas id="myChart" width="10px" height="10px"></canvas>
+          <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ['January', 'Febuary', 'March', 'April','July', 'Augest', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                  label: 'Atendance of individual students',
+                  data: [20, 21, 22, 23, 21, 28, 29, 18, 12, 20],
+                  backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-5">
+          <p>Subject Analytics</p>
+          <div class="dropdown child">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Subject
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button">WebProgramming</button>
+              <button class="dropdown-item" type="button">Operating System</button>
+              <button class="dropdown-item" type="button">Discrete Mathematics</button>
+              <button class="dropdown-item" type="button">Object Oriented Programming</button>
+              <button class="dropdown-item" type="button">Communication Skills</button>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <canvas id="myChart1" width="400" height="400"></canvas>
+          <script>
+            var ctx = document.getElementById('myChart1').getContext('2d');
+            var myChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ['January', 'Febuary', 'March', 'April','July', 'Augest', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                  label: 'Attendance per subject',
+                  data: [240, 220, 220, 199, 130, 112,140,210,230,280],
+                  backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-5">
+          <p>Standard Analytics</p>
+          <div class="dropdown child">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Standard
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <button class="dropdown-item" type="button">FY</button>
+              <button class="dropdown-item" type="button">SY</button>
+              <button class="dropdown-item" type="button">TY</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <canvas id="myChart2" width="400" height="400"></canvas>
+          <script>
+            var ctx = document.getElementById('myChart2').getContext('2d');
+            var myChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ['January', 'Febuary', 'March', 'April','July', 'Augest', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                  label: 'Attendance per standard',
+                  data: [250, 220, 230, 160, 180, 180,190,200,280,230],
+                  backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+        </div>
+      </div><br>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Log out</title>
+<head>
+ <meta charset="utf-8">
+  <meta id="testViewport" name="viewport" content="width=device-width, initial-scale=0.34">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="cs1.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  <script>
+  
+    var sw = window.innerWidth;
+var sh = window.innerHeight;
+if (sw >= 768) {
+    var mvp = document.getElementById("testViewport");
+    mvp.setAttribute("content","width=initial-scale=1");
+}
+  
+  
+  
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "310px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+  function f1(){
+  document.getElementById('vsbl').style.display="block";
+  }
+  function visbl(){
+  window.setTimeout("f1()",600);
+  
+  var elem = document.getElementById("mySidenav");
+                elem.scrollBy(0,100);
+  }
+  
+  function cncl(){
+  window.open("home.html","_self");
+  }
+  
+
+	confirm("Confirmation Message For Logout");
+
+
+  </script>
+  
+  
+   <style>
+
+ }
+ 
+  @media(max-width: 1060px){
+ 
+  .anim1{
+  width:1060px;
+  }
+ }
+ </style>
+</head>
+<body class="anim1" style="height:660px;background:#f6f6f9;overflow-x:hidden;" onLoad="visbl()">
+
+<div id="mySidenav" class="sidenav" style="width:310px;">
+<div class="div1"></div>
+<div class="div3"></div>
+<div class="div2"><span class="spn55" id="name55">name</span></div>
+<span style="position:absolute;left:1px;top:0px;">
+  </span>
+  <a href="home.html" class="closebtn" onclick="closeNav()" style="padding-top:0px;">&times;</a>
+  <a href="setting.html" style="position: relative; top:300px"><span class="fa fa-cog" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting</a>
+  <a href="account.html" style="position: relative; top:330px"><span class="fa fa-user" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account</a>
+  <a href="#" style="position: relative; top:360px"><span class="fa fa-id-card" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us</a>
+   <a href="version.html" style="position: relative; top:390px"><span class="fa fa-external-link" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version</a>
+  <a href="log out.html" style="position: relative; top:420px;border: 1px solid black;background:#cbcbdd;border-radius:8px;"><span class=" fa fa-sign-out" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log out</a>
+</div>
+
+
+
+
+    
+
+
+		 
+
+		 
+
+</body>
+</html>

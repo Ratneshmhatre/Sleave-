@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Class Work</title>
+<head>
+ <meta charset="utf-8">
+ <meta id="testViewport" name="viewport" content="width=device-width, initial-scale=0.34">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="cs1.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <script src="js1.js"></script>
+		 
+<style>
+	 *{
+ box-sizing:border-box;
+ }
+ .mainmenu{
+ z-index:1;
+ background:#2c2c54;
+ height:80px;
+ } 
+
+.wrapper{
+  margin-top:150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: space-evenly;
+  }
+
+.wrapper .card{
+  background: #fff;
+  width: calc(30% - 20px);
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper .card2{
+position:absolute;
+top:0px;
+  background: #fff;
+  width: calc(100% - 0px);
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+/*attendance*/
+
+.attend{
+position:absolute;
+top:200px:
+left:200px;
+width:500px;
+height:300px;
+background-color:white;
+box-shadow: 2px 2px 3px #999;
+display:none;
+
+}
+
+.float2{
+	position:absolute;
+	width:60px;
+	height:60px;
+	top:400px;
+	left:30px;
+	background-color:#F33;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	z-index:10;
+	
+}
+
+
+
+/*assignment*/
+.label-container{
+	position:absolute;
+	top:255px;
+	right:50px;
+	display:table;
+	visibility:hidden;
+}
+
+
+.label-text{
+	color:#FFF;
+	background:rgba(51,51,51,0.5);
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	border-radius:3px;
+	position:relative;
+	top:2px;
+}
+
+.label-arrow{
+	display:table-cell;
+	vertical-align:middle;
+	color:#333;
+	opacity:0.5;
+}
+
+
+.float{
+	position:absolute;
+	width:60px;
+	height:60px;
+	top:400px;
+	right:30px;
+	background-color:#F33;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	z-index:10;
+}
+
+.u1{
+	position:absolute;
+	right:30px;
+	padding-bottom:20px;
+	top:255px;
+	z-index:100;
+	visibility:hidden;
+}
+
+.u1 .l1{
+	list-style:none;
+	margin-bottom:10px;
+}
+
+.u1 .l1 .a9{
+	background-color:#F33;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	width:60px;
+	height:60px;
+	display:block;
+}
+
+.u1:active{
+	visibility:visible!important;
+	opacity:1!important;
+}
+
+
+.my-float{
+	font-size:24px;
+	margin-top:18px;
+}
+
+a#menu-share + .u1{
+  visibility: hidden;
+  
+}
+
+
+a#menu-share i{
+	animation: rotate-in 0.5s;
+}
+
+a#menu-share:hover > i{
+	animation: rotate-out 0.5s;
+}
+
+@keyframes scale-in {
+    from {transform: scale(0);opacity: 0;}
+    to {transform: scale(1);opacity: 1;}
+}
+
+@keyframes rotate-in {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes rotate-out {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+}
+
+
+/*Assignment and material*/
+.assign{
+position:absolute;
+top:200px:
+left:200px;
+width:500px;
+height:300px;
+background-color:white;
+box-shadow: 2px 2px 3px #999;
+display:none;
+
+}
+
+.mater{position:absolute;
+top:200px:
+left:200px;
+width:500px;
+height:300px;
+background-color:white;
+box-shadow: 2px 2px 3px #999;
+display:none;
+}
+
+
+/*menu*/
+.menu1{
+margin-left:80px;
+font-weight:bold;
+font-size:20px;
+}
+
+.logo{
+position:relative;
+left:100px;
+top:0px;
+}
+
+.s1:hover{color:#cbcbdd;}
+
+.s1{position:relative;left:140px;top:0px;font-size:35px;}
+
+.b2{position:relative;left:-150px; top:0px;font-size:25px;}
+
+
+
+.c1:hover, .c2:hover, .c3:hover, .c4:hover, .c5:hover{cursor:pointer;background-color:#ffffef !important;}
+
+.cc1{position:absolute;
+top:0px; !important;
+left:180px;
+width:30px; 
+height:30px;
+border-radius:100px;
+font-size:40px;
+color:black;
+
+}
+.cc1:hover{color:#cbcbdd !important;}
+
+ @media(min-width: 770px) and (max-width: 1300px){
+ 
+  .menu1{
+  margin-left:1px;
+  }
+   .logo{
+  left:70px;
+  }
+  .b2{
+  left:-90px;
+ 
+  }
+   .s1{
+  left:80px;
+  }
+  .cc1{
+  left:120px;
+  }
+  
+  .float2{
+  left:50px;
+  }
+  }
+
+
+
+	 </style>
+	 <body class="anim1" style="height:1400px;background:#f6f6f9;overflow-x:hidden;">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top mainmenu">
+  <a class="navbar-brand ml-3 rounded-circle bg-white text-dark pl-4 pr-4" style="font-weight:bold;font-size:40px;cursor:pointer;" onclick="openNav()" href="#">A</a>
+     <ul class="navbar-nav nav-tabs" role="tablist" style="border-bottom:0px">
+    <li class="nav-item menu1">
+      <a class="nav-link bg-transparent" data-toggle="tab" href="home.html" style="padding-left:40px;padding-right:40px;color:#ffffff;">Home</a>
+    </li>
+    <li class="nav-item menu1">
+      <a class="nav-link bg-transparent " data-toggle="tab" href="class work.html" style="padding-left:40px;padding-right:40px;color:#ffffff;border: 1px solid #ffffff;background:transparent;">Class Work</a>
+    </li>
+	    <li class="nav-item menu1">
+      <a class="nav-link bg-transparent" data-toggle="tab" href="schedule.html" style="padding-left:40px;padding-right:40px;color:#ffffff;">Schedule</a>
+    </li>
+		    <li class="nav-item menu1">
+      <a class="nav-link bg-transparent  data-toggle="tab" href="Analytics.html" style="padding-left:40px;padding-right:40px;color:#ffffff;">Analytics</a>
+    </li>
+  </ul>
+  <span class="navbar-brand logo">
+   <img src="https://i.imgur.com/4RHFSoI.jpg" width="86px" height="80px">
+  </span>
+</nav>
+<div id="mySidenav" class="sidenav">
+<div class="div1"></div>
+<div class="div3"></div>
+<div class="div2"><span class="spn55" id="name55">name</span></div>
+<span style="position:absolute;left:1px;top:0px;">
+  </span>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top:0px;border: 0px solid #ffffff;">&times;</a>
+  <a href="account.html" style="position: relative; top:330px"><span class="fa fa-user" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account</a>
+  <a href="#" style="position: relative; top:360px"><span class="fa fa-id-card" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us</a>
+   <a href="version.html" style="position: relative; top:390px"><span class="fa fa-external-link" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version</a>
+  <a href="javascript:void(0)" onclick="logOut()" style="position: relative; top:420px"><span class=" fa fa-sign-out" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log out</a>
+ 
+
+</div>
+
+<div class="wrapper container-fluid">
+      <div class="subj1 card container" style="cursor:pointer;">
+	   <div class="card2" style="background:#acc3a6;">
+	   <b style="position:relative;top:0px;font-size:20px;">Web Programming</b>
+	  </div><br><br>
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	   
+	   <div class="subj2 card container" style="cursor:pointer;">
+	   <div class="card2" style="background:#ff2c55;">
+	   <b style="position:relative;top:0px;font-size:20px;">Android Programming</b>
+	  </div><br><br>
+	    <p id="s2as1">1</p>
+	    <p id="s2as2">2</p>
+	    <p id="s2as3">3</p>
+	  </div>
+	   
+	   <div class="subj3 card container" style="cursor:pointer;">
+	   <div class="card2" style="background:#e9d985;">
+	   <b style="position:relative;top:0px;font-size:20px;">Database Management Sysytem</b>
+	   </div><br><br>
+	    <p id="s3as1">1</p>
+	    <p id="s3as2">2</p>
+	    <p id="s3as3">3</p>
+	  </div>
+	     
+		 <div class="subj4 card container" style="relative:absolute;top:30px;cursor:pointer;">
+	   <div class="card2" style="background:#009788;">
+	   <b style="position:relative;top:0px;font-size:20px;">Applied Mathematics</b>
+	   </div><br><br>
+	    <p id="s4as1">1</p>
+	    <p id="s4as2">2</p>
+	    <p id="s4as3">3</p>
+	  </div>
+	  
+	     <div class="subj5 card container" style="relative:absolute;top:30px;cursor:pointer;">
+	   <div class="card2" style="background:#ff9c00;">
+	   <b style="position:relative;top:0px;font-size:20px;">Software Engineering</b>
+	  </div><br><br>
+	    <p id="s5as1">asss1</p>
+	    <p id="s5as2">ass2</p>
+	    <p id="s5as3">ass3</p>
+	  </div>
+	  </div>
+	  
+	  
+	 	  
+	   <div class="sub1 wrapper container-fluid" style="display:none">
+        <div class="card container" style="width: calc(70% - 20px);height:700px;background:rgb(233,201,223);">
+	   <div class="card2" style="background:#acc3a6;height: 120px;">
+	   <b style="position:relative;top:0px;font-size:40px;">Web Programming</b>
+	  </div><br><br>
+	   <div class="card2" style="background:#ffffff;height: 60px;top: 150px;border-radius:100px;flex-wrap:wrap;">
+	   <b class="b2">Assignment</b>
+	   <span class="fa fa-paperclip s1"span>
+	   </div>
+	   <a href="#" onclick="visbl()" class="float" id="menu-share">
+<i class="fa fa-plus my-float"></i>
+</a>
+<div class="label-container lbl1">
+       <div class="label-text assignbtn" style="top:10px;right:-50px">Assignment</div>
+       <i class="fa fa-play label-arrow" style="position:relative;top:10px;right:-50px;"></i>
+	   <div class="label-text materbtn" style="top:80px;right:50px;">Material</div>
+	     <i class="fa fa-play label-arrow" style="position:relative;top:80px;right:50px;"></i>
+       </div>
+	    <div class="assign assign1">
+	   <center>
+	   <form name="assign1" method="post">
+	   <textarea rows="5" cols="50" placeholder="Assignment Details" name="assign1dtls"></textarea><br><br>
+	   Select File: <input type="file" name="assign1file"><br><br>
+	   Due Date: <input type="datetime-local" name="due_date1"><br><br>
+	   <input type="submit" name="assign1sbmt" value="Submit">
+	   </form>
+	   </center> 
+	   </div>
+	   
+	   <div class="mater mater1">
+	   <center>
+	   <form name="mater1" method="post">
+	    <textarea rows="5" cols="50" placeholder="Material Details" name="mater1dtls"></textarea><br><br>
+	   Select File: <input type="file" name="mater1file"><br><br>
+	   <input type="submit" name="mater1sbmt" value="Submit">
+	   </form>
+	   </center>
+	   </div>
+<ul class="u1 wp">
+<li class="l1"><a class="a9" href="#">
+<i class="fa fa-sticky-note my-float" onclick="assign()"></i>
+</a></li>
+<li class="l1"><a class="a9" href="#">
+<i class="fa fa-file my-float" onclick="mater()"></i>
+</a></li>
+</ul>
+<a href="#" onclick="attend()" class="float2" id="menu-share">
+<i class="fa fa-link my-float"></i>
+</a>
+	   <div class="attend attn1 container">
+	   <h1 align="center">Attendance Link</h1>
+	   <button style="position:relative;top:100px;left:200px;width:100px;height:50px;">Turn on</button>
+	   
+	   </div>
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	  </div>
+	  
+	    <div class="sub2 wrapper container-fluid" style="display:none">
+        <div class="card container" style="width: calc(70% - 20px);height:700px;background:lightpink;">
+	   <div class="card2" style="background:#ff2c55;height: 120px;">
+	   <b style="position:relative;top:0px;font-size:40px;">Android Programming</b>
+	  </div><br><br>
+	   <div class="card2" style="background:#ffffff;height: 60px;top: 150px;border-radius:100px;flex-wrap:wrap;">
+	   <b class="b2">Assignment</b>
+	   <span class="fa fa-paperclip s1"span>
+	   </div>   
+	   <a href="#" onclick="visbl()" class="float" id="menu-share">
+<i class="fa fa-plus my-float"></i>
+</a>
+<div class="label-container lbl2">
+       <div class="label-text" style="top:10px;right:-50px">Assignment</div>
+       <i class="fa fa-play label-arrow" style="position:relative;top:10px;right:-50px;"></i>
+	   <div class="label-text" style="top:80px;right:50px;">Material</div>
+	     <i class="fa fa-play label-arrow" style="position:relative;top:80px;right:50px;"></i>
+       </div>
+	   
+	       <div class="assign assign2">
+	   <center>
+	   <form name="assign2" method="post">
+	   <textarea rows="5" cols="50" placeholder="Assignment Details" name="assign2dtls"></textarea><br><br>
+	   Select File: <input type="file" name="assign2file"><br><br>
+	   Due Date: <input type="datetime-local" name="due_date2"><br><br>
+	   <input type="submit" name="assign2sbmt" value="Submit">
+	   </form>
+	   </center> 
+	   </div>
+	   
+	   <div class="mater mater2">
+	   <center>
+	   <form name="mater2" method="post">
+	    <textarea rows="5" cols="50" placeholder="Material Details" name="mater2dtls"></textarea><br><br>
+	   Select File: <input type="file" name="mater2file"><br><br>
+	   <input type="submit" name="mater2sbmt" value="Submit">
+	   </form>
+	   </center>
+	   </div>
+	   
+<ul class="u1 ap">
+<li class="l1"><a class="a9" href="#">
+<i class="fa fa-sticky-note my-float" onclick="assign()"></i>
+</a></li>
+<li class="l1"><a class="a9" href="#">
+<i class="fa fa-file my-float" onclick="mater()"></i>
+</a></li>
+</ul>
+<a href="#" onclick="attend()" class="float2" id="menu-share">
+<i class="fa fa-link my-float"></i>
+</a>
+	   <div class="attend attn2 container">
+	   <h1 align="center">Attendance Link</h1>
+	   <button style="position:relative;top:100px;left:200px;width:100px;height:50px;">Turn on</button>
+	   </div>
+	   
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	  </div>
+	  
+	    <div class="sub3 wrapper container-fluid" style="display:none">
+        <div class="card container" style="width: calc(70% - 20px);height:700px;background:lightpink;">
+	   <div class="card2" style="background:#e9d985;height: 120px;">
+	   <b style="position:relative;top:0px;font-size:40px;">Database Management Sysytem</b>
+	  </div><br><br>
+	   <div class="card2" style="background:#ffffff;height: 60px;top: 150px;border-radius:100px;flex-wrap:wrap;">
+	   <b class="b2">Assignment</b>
+	   <span class="fa fa-paperclip s1"span>
+	   </div>
+	     <a href="#" onclick="visbl()" class="float" id="menu-share">
+<i class="fa fa-plus my-float"></i>
+</a>
+<div class="label-container lbl3">
+       <div class="label-text" style="top:10px;right:-50px">Assignment</div>
+       <i class="fa fa-play label-arrow" style="position:relative;top:10px;right:-50px;"></i>
+	   <div class="label-text" style="top:80px;right:50px;">Material</div>
+	     <i class="fa fa-play label-arrow"style="position:relative;top:80px;right:50px;"></i>
+       </div>
+	   
+	       <div class="assign assign3">
+	   <center>
+	   <form name="assign3" method="post">
+	   <textarea rows="5" cols="50" placeholder="Assignment Details" name="assign3dtls"></textarea><br><br>
+	   Select File: <input type="file" name="assign3file"><br><br>
+	   Due Date: <input type="datetime-local" name="due_date3"><br><br>
+	   <input type="submit" name="assign3sbmt" value="Submit">
+	   </form>
+	   </center> 
+	   </div>
+	   
+	   <div class="mater mater3">
+	   <center>
+	   <form name="mater3" method="post">
+	    <textarea rows="5" cols="50" placeholder="Material Details" name="mater3dtls"></textarea><br><br>
+	   Select File: <input type="file" name="mater3file"><br><br>
+	   <input type="submit" name="mater3sbmt" value="Submit">
+	   </form>
+	   </center>
+	   </div>
+	   
+<ul class="u1 dbms">
+<li class="l1"><a class="a9" href="#">
+<i class="fa fa-sticky-note my-float" onclick="assign()"></i>
+</a></li>
+<li class="l1"><a class="a9" href="#">
+<i class="fa fa-file my-float" onclick="mater()"></i>
+</a></li>
+</ul>
+<a href="#" onclick="attend()" class="float2" id="menu-share">
+<i class="fa fa-link my-float"></i>
+</a>
+	   <div class="attend attn3 container">
+	   <h1 align="center">Attendance Link</h1>
+	   <button style="position:relative;top:100px;left:200px;width:100px;height:50px;">Turn on</button>
+	   </div>
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	  </div>
+	  
+	    <div class="sub4 wrapper container-fluid" style="display:none">
+        <div class="card container" style="width: calc(70% - 20px);height:700px;background:lightpink;">
+	   <div class="card2" style="background:#009788;height: 120px;">
+	   <b style="position:relative;top:0px;font-size:40px;">Applied Mathematics</b>
+	  </div><br><br>
+	   <div class="card2" style="background:#ffffff;height: 60px;top: 150px;border-radius:100px;flex-wrap:wrap;">
+	   <b class="b2">Assignment</b>
+	   <span class="fa fa-paperclip s1"span>
+	   </div>
+	  <a href="#" onclick="visbl()" class="float" id="menu-share">
+<i class="fa fa-plus my-float"></i>
+</a>
+<div class="label-container lbl4">
+       <div class="label-text" style="top:10px;right:-50px">Assignment</div>
+       <i class="fa fa-play label-arrow" style="position:relative;top:10px;right:-50px;"></i>
+	   <div class="label-text" style="top:80px;right:50px;">Material</div>
+	     <i class="fa fa-play label-arrow"style="position:relative;top:80px;right:50px;"></i>
+       </div>
+	   
+	       <div class="assign assign4">
+	   <center>
+	   <form name="assign4" method="post">
+	   <textarea rows="5" cols="50" placeholder="Assignment Details" name="assign4dtls"></textarea><br><br>
+	   Select File: <input type="file" name="assign4file"><br><br>
+	   Due Date: <input type="datetime-local" name="due_date4"><br><br>
+	   <input type="submit" name="assign4sbmt" value="Submit">
+	   </form>
+	   </center> 
+	   </div>
+	   
+	   <div class="mater mater4">
+	   <center>
+	   <form name="mater4" method="post">
+	    <textarea rows="5" cols="50" placeholder="Material Details" name="mater4dtls"></textarea><br><br>
+	   Select File: <input type="file" name="mater4file"><br><br>
+	   <input type="submit" name="mater4sbmt" value="Submit">
+	   </form>
+	   </center>
+	   </div>
+	   
+<ul class="u1 am">
+<li class="l1"><a class="a9" href="#">
+<i class="fa fa-sticky-note my-float" onclick="assign()"></i>
+</a></li>
+<li class="l1"><a class="a9" href="#">
+<i class="fa fa-file my-float" onclick="mater()"></i>
+</a></li>
+</ul>
+<a href="#" onclick="attend()" class="float2" id="menu-share">
+<i class="fa fa-link my-float"></i>
+</a>
+	   <div class="attend attn4 container">
+	   <h1 align="center">Attendance Link</h1>
+	   <button style="position:relative;top:100px;left:200px;width:100px;height:50px;">Turn on</button>
+	   </div>
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	  </div>
+	  
+	    <div class="sub5 wrapper container-fluid" style="display:none">
+        <div class="card container" style="width: calc(70% - 20px);height:700px;background:lightpink;">
+	   <div class="card2" style="background:#ff9c00;height: 120px;">
+	   <b style="position:relative;top:0px;font-size:40px;">Software Engineering</b>
+	  </div><br><br>
+	   <div class="card2" style="background:#ffffff;height: 60px;top: 150px;border-radius:100px;flex-wrap:wrap;">
+	   <b class="b2">Assignment</b>
+	   <span class="fa fa-paperclip s1"span>
+	   </div>
+	   <a href="#" onclick="visbl()" class="float" id="menu-share">
+<i class="fa fa-plus my-float"></i>
+</a>
+<div class="label-container lbl5">
+       <div class="label-text" style="top:10px;right:-50px">Assignment</div>
+       <i class="fa fa-play label-arrow" style="position:relative;top:10px;right:-50px;"></i>
+	   <div class="label-text" style="top:80px;right:50px;">Material</div>
+	     <i class="fa fa-play label-arrow"style="position:relative;top:80px;right:50px;"></i>
+       </div>
+	   
+	       <div class="assign assign5">
+	   <center>
+	   <form name="assign5" method="post">
+	   <textarea rows="5" cols="50" placeholder="Assignment Details" name="assign5dtls"></textarea><br><br>
+	   Select File: <input type="file" name="assign5file"><br><br>
+	   Due Date: <input type="datetime-local" name="due_date5"><br><br>
+	   <input type="submit" name="assign5sbmt" value="Submit">
+	   </form>
+	   </center> 
+	   </div>
+	   
+	   <div class="mater mater5">
+	   <center>
+	   <form name="mater5" method="post">
+	    <textarea rows="5" cols="50" placeholder="Material Details" name="mater5dtls"></textarea><br><br>
+	   Select File: <input type="file" name="mater5file"><br><br>
+	   <input type="submit" name="mater5sbmt" value="Submit">
+	   </form>
+	   </center>
+	   </div>
+	   
+<ul class="u1 se">
+<li class="l1"><a class="a9" href="#">
+<i class="fa fa-sticky-note my-float" onclick="assign()"></i>
+</a></li>
+<li class="l1"><a class="a9" href="#">
+<i class="fa fa-file my-float" onclick="mater()"></i>
+</a></li>
+</ul>
+<a href="#" onclick="attend()" class="float2" id="menu-share">
+<i class="fa fa-link my-float"></i>
+</a>
+	   <div class="attend attn5 container">
+	   <h1 align="center">Attendance Link</h1>
+	   <button style="position:relative;top:100px;left:200px;width:100px;height:50px;">Turn on</button>
+	   </div>
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	  </div>
+	  
+	  <div class="slt wrapper container-fluid" style="position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:none;">
+	  <a href="class work.html" class="cc1" style="text-decoration:none;"><b>&times;</b></a>
+	  <div class="c1 card container" style="position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:#acc3a6;"></div></a>
+	  <div class="c2 card container" style="position:relative;top:170px;width:80px;height:80px;border-radius:100px;background:#ff2c55;"></div>
+	  <div class="c3 card container" style="position:relative;top:190px;width:80px;height:80px;border-radius:100px;background:#e9d985;"></div>
+	  <div class="c4 card container" style="position:relative;top:210px;width:80px;height:80px;border-radius:100px;background:#009788;"></div>
+	  <div class="c5 card container" style="position:relative;top:230px;width:80px;height:80px;border-radius:100px;background:#ff9c00;"></div>
+	  </div>
+	  <script language="javascript">
+	  var c1=document.querySelector('.c1');
+	  var c2=document.querySelector('.c2');
+	  var c3=document.querySelector('.c3');
+	  var c4=document.querySelector('.c4');
+	  var c5=document.querySelector('.c5');
+	  var sub1=document.querySelector('.sub1');
+	  var sub2=document.querySelector('.sub2');
+	  var sub3=document.querySelector('.sub3');
+	  var sub4=document.querySelector('.sub4');
+	  var sub5=document.querySelector('.sub5');
+	  var wrapper=document.querySelector('.wrapper');
+	  var selector=document.querySelector('.slt');
+	  var subj1=document.querySelector('.subj1');
+	  var subj2=document.querySelector('.subj2');
+	  var subj3=document.querySelector('.subj3');
+	  var subj4=document.querySelector('.subj4');
+	  var subj5=document.querySelector('.subj5');
+	  
+	  subj1.addEventListener('click',function(){
+	  wrapper.setAttribute('style','display:none');
+	  sub1.setAttribute('style','display:block;');
+	  selector.setAttribute('style','position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:block;');
+	  c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  })
+	   subj2.addEventListener('click',function(){
+	  wrapper.setAttribute('style','display:none');
+	  sub2.setAttribute('style','display:block;');
+	  selector.setAttribute('style','position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:block;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  })
+	   subj3.addEventListener('click',function(){
+	  wrapper.setAttribute('style','display:none');
+	  sub3.setAttribute('style','display:block;');
+	  selector.setAttribute('style','position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:block;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  })
+	   subj4.addEventListener('click',function(){
+	  wrapper.setAttribute('style','display:none');
+	  sub4.setAttribute('style','display:block;');
+	  selector.setAttribute('style','position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:block;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  }) 
+	  subj5.addEventListener('click',function(){
+	  wrapper.setAttribute('style','display:none');
+	  sub5.setAttribute('style','display:block;');
+	  selector.setAttribute('style','position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:block;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  })
+	  
+	  c1.addEventListener("click",function(){
+	  c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:#ff2c55;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:#e9d985;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:#009788;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:#ff9c00;');
+	  
+	  function setting(){
+	  sub1.setAttribute('style','display:block;');
+	  sub2.setAttribute('style','display:none;');
+	  sub3.setAttribute('style','display:none;');
+	  sub4.setAttribute('style','display:none;');
+	  sub5.setAttribute('style','display:none;');
+	  }
+	  setting();
+	  })
+	  
+	   c2.addEventListener("click",function(){
+	   c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:#acc3a6;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:#e9d985;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:#009788;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:#ff9c00;');
+	  
+	  function setting(){
+	  sub1.setAttribute('style','display:none;');
+	  sub2.setAttribute('style','display:block;');
+	  sub3.setAttribute('style','display:none;');
+	  sub4.setAttribute('style','display:none;');
+	  sub5.setAttribute('style','display:none;');
+	  }
+	  setting();
+	  })
+	  
+	   c3.addEventListener("click",function(){
+      c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:#acc3a6;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:#ff2c55;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:#009788;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:#ff9c00;');
+	  
+	  function setting(){
+	  sub1.setAttribute('style','display:none;');
+	  sub2.setAttribute('style','display:none;');
+	  sub3.setAttribute('style','display:block;');
+	  sub4.setAttribute('style','display:none;');
+	  sub5.setAttribute('style','display:none;');
+	  }
+	  setting();
+	  })
+	  
+	   c4.addEventListener("click",function(){
+	    c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:#acc3a6;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:#ff2c55;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:#e9d985;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:#ff9c00;');
+	  
+	  function setting(){
+	  sub1.setAttribute('style','display:none;');
+	  sub2.setAttribute('style','display:none;');
+	  sub3.setAttribute('style','display:none;');
+	  sub4.setAttribute('style','display:block;');
+	  sub5.setAttribute('style','display:none;');
+	  }
+	  setting();
+	  })
+	  
+	   c5.addEventListener("click",function(){
+	   c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:#acc3a6;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:#ff2c55;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:#e9d985;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:#009788;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  
+	  function setting(){
+	  sub1.setAttribute('style','display:none;');
+	  sub2.setAttribute('style','display:none;');
+	  sub3.setAttribute('style','display:none;');
+	  sub4.setAttribute('style','display:none;');
+	  sub5.setAttribute('style','display:block;');
+	  }
+	  setting();
+	  })
+	 
+	  function visbl(){
+	 var a=document.querySelector('.wp');
+	 var b=document.querySelector('.am');
+	 var c=document.querySelector('.dbms');
+	 var d=document.querySelector('.ap');
+	 var e=document.querySelector('.se');
+	  var f=document.querySelector('.lbl1');
+	  var g=document.querySelector('.lbl2');
+	  var h=document.querySelector('.lbl3');
+	  var i=document.querySelector('.lbl4');
+	  var j=document.querySelector('.lbl5');
+	
+	  if(a.style.visibility==="visible"||b.style.visibility==="visible"||c.style.visibility==="visible"||d.style.visibility==="visible"||e.style.visibility==="visible"||f.style.visibility==="visible"||g.style.visibility==="visible"||h.style.visibility==="visible"||i.style.visibility==="visible"||j.style.visibility==="visible")
+	  {
+	  a.setAttribute('style','visibility:hidden!important;');
+	  b.setAttribute('style','visibility:hidden!important;');
+	  c.setAttribute('style','visibility:hidden!important;');
+	  d.setAttribute('style','visibility:hidden!important;');
+	  e.setAttribute('style','visibility:hidden!important;');
+	  f.setAttribute('style','visibility:hidden!important;');
+	  g.setAttribute('style','visibility:hidden!important;');
+	  h.setAttribute('style','visibility:hidden!important;');
+	  i.setAttribute('style','visibility:hidden!important;');
+	  j.setAttribute('style','visibility:hidden!important;');
+
+	  
+	  
+	  }
+	  else
+	  {
+	  a.setAttribute('style','visibility:visible!important;animation: scale-in 0.5s;');
+	  b.setAttribute('style','visibility:visible!important;animation: scale-in 0.5s;');
+	  c.setAttribute('style','visibility:visible!important;animation: scale-in 0.5s;');
+	  d.setAttribute('style','visibility:visible!important;animation: scale-in 0.5s;');
+	  e.setAttribute('style','visibility:visible!important;animation: scale-in 0.5s;');
+	  f.setAttribute('style','visibility:visible!important;animation: scale-in 0.5s;');
+	  g.setAttribute('style','visibility:visible!important;animation: scale-in 0.5s;');
+	  h.setAttribute('style','visibility:visible!important;animation: scale-in 0.5s;');
+	  i.setAttribute('style','visibility:visible!important;animation: scale-in 0.5s;');
+	  j.setAttribute('style','visibility:visible!important;animation: scale-in 0.5s;');
+	
+	  
+	  }
+	  }
+	  
+	  function attend(){
+	  var a=document.querySelector('.attn1');
+	  var b=document.querySelector('.attn2');
+	  var c=document.querySelector('.attn3');
+	  var d=document.querySelector('.attn4');
+	  var e=document.querySelector('.attn5');
+	 
+	 
+	  
+	  if(a.style.display==="none"||b.style.display==="none"||c.style.display==="none"||d.style.display==="none"||e.style.display==="none")
+	  {
+	  a.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  b.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  c.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  d.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  e.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	 
+	  }
+	  else{
+	  a.setAttribute('style','display:none!important;');
+	  b.setAttribute('style','display:none!important;');
+	  c.setAttribute('style','display:none!important;');
+	  d.setAttribute('style','display:none!important;');
+	  e.setAttribute('style','display:none!important;');
+
+	  }
+	  }
+	  
+	  function assign(){
+	   var a=document.querySelector('.assign1');
+	   var b=document.querySelector('.assign2');
+	   var c=document.querySelector('.assign3');
+	   var d=document.querySelector('.assign4');
+	   var e=document.querySelector('.assign5');
+	  
+	   if(a.style.display==="none"||b.style.display==="none"||c.style.display==="none"||d.style.display==="none"||e.style.display==="none")
+	   {
+	  a.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  b.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  c.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  d.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  e.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  }
+	  else{
+	  a.setAttribute('style','display:none!important;');
+	  b.setAttribute('style','display:none!important;');
+	  c.setAttribute('style','display:none!important;');
+	  d.setAttribute('style','display:none!important;');
+	  e.setAttribute('style','display:none!important;');
+	  }
+	  }
+	  
+	  function mater(){
+	  var a=document.querySelector('.mater1');
+	  var b=document.querySelector('.mater2');
+	  var c=document.querySelector('.mater3');
+	  var d=document.querySelector('.mater4');
+	  var e=document.querySelector('.mater5');
+	     if(a.style.display==="none"||b.style.display==="none"||c.style.display==="none"||d.style.display==="none"||e.style.display==="none")
+		{
+		 a.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+		 b.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+		 c.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+		 d.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+		 e.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  }
+	  else{
+	  a.setAttribute('style','display:none!important;');
+	  b.setAttribute('style','display:none!important;');
+	  c.setAttribute('style','display:none!important;');
+	  d.setAttribute('style','display:none!important;');
+	  e.setAttribute('style','display:none!important;');
+	  }
+	  }
+	 
+	  </script>
+	</body>
+	</html>
+
