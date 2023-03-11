@@ -1,0 +1,28 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+  <div class="card">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">Overall</div>
+        <div class="text" style="position:absolute;top:0px">Attendance</div>
+      </div>
+///////////////////////////////////////////////////////////////////////////////////////////
+ <div class="card js">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">This Month</div>
+         <div class="text" style="position:absolute;top:0px">Attendance</div>
+      </div>
+////////////////////////////////////////////////////////////////////////////////////////////	
+      <div class="card react">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">This Week</div>
+         <div class="text" style="position:absolute;top:0px">Attendance</div>
+      </div>
+///////////////////////////////////////////////////////////////////////////////////////////////	  

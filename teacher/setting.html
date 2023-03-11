@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Setting</title>
+<head>
+ <meta charset="utf-8">
+ <meta id="testViewport" name="viewport" content="width=device-width, initial-scale=0.34">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="cs1.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  <script>
+  
+    var sw = window.innerWidth;
+var sh = window.innerHeight;
+if (sw >= 768) {
+    var mvp = document.getElementById("testViewport");
+    mvp.setAttribute("content","");
+}
+  
+  
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "310px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function logOut(){
+a=confirm("Confirmation Message For Logout");
+
+if(a==true){
+	alert("You Log Out Succesfully");
+}
+}
+  
+  </script>
+   <style>
+   .switch {
+  position: relative;
+  top:200px;
+  left:420px;
+  display: inline-block;
+  width: 80px;
+  height: 44px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 36px;
+  width: 36px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(36px);
+  -ms-transform: translateX(36px);
+  transform: translateX(36px);
+}
+   
+ .d8{
+ z-index:1;
+ position:absolute;
+ top:0px;
+ left:310px;
+ background:#f6f6f9;
+ width:1040px;
+ height:660px;
+ }
+  .s1{position:relative;
+ top:210px;
+ left:200px;
+ font-weight:bold;
+ font-size:35px;
+ }
+ 
+
+ .slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+ 
+  @media(max-width: 1060px){
+ 
+  .anim1{
+  width:1060px;
+  }
+ }
+ </style>
+</head>
+<body class="anim1" style="height:660px;background:#f6f6f9;overflow-x:hidden;">
+<div class="d8">
+<span class="s1">THEME</span><label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+<br><br><br>
+<span class="s1">NOTIFICATON</span><label class="switch" style="top:193px;left:305px">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+
+</div>
+
+
+
+
+
+<div id="mySidenav" class="sidenav" style="width:310px;">
+<div class="div1"></div>
+<div class="div3"></div>
+<div class="div2"><span class="spn55" id="name55">name</span></div>
+<span style="position:absolute;left:1px;top:0px;">
+  </span>
+  <a href="home.html" class="closebtn" onclick="closeNav()" style="padding-top:0px;">&times;</a>
+  <a href="setting.html" style="position: relative; top:300px;border: 1px solid black;background:#cbcbdd;border-radius:8px;"><span class="fa fa-cog" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:40px" class="fa fa-angle-right"></span></a>
+  <a href="account.html" style="position: relative; top:330px"><span class="fa fa-user" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account</a>
+  <a href="#" style="position: relative; top:360px"><span class="fa fa-id-card" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us</a>
+   <a href="version.html" style="position: relative; top:390px"><span class="fa fa-external-link" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version</a>
+  <a href="javascript:void(0)" onclick="logOut()" style="position: relative; top:420px"><span class=" fa fa-sign-out" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log out</a>
+</div>
+
+
+
+
+    
+
+
+		 
+
+		 
+
+</body>
+</html>
