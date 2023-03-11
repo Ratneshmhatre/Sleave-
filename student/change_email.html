@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Update screen</title>
+
+
+
+
+
+
+</head>
+
+<body bgcolor="#f6f6f9">
+<div style="border-color: #eeece4;border-style:solid;width:500px;position:absolute;top:200px;left:500px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);text-align:center" bgcolor="white">
+	<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" required>
+		<label for="change"><font size="6px">Change Email Address</font></label><br><br><br><br>
+
+		<label for="currentemail">Current Email Address:</label>
+		<input type="text" id="currentemail" name="currentemail"><br><br>
+	
+		<label for="newemail"> New Email Address:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="text" id="newemail" name="newemail" onkeyup="compare_input();"><br><br>
+
+		<label for="change_emailPassword">Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="password" id="change_emailPassword" name="change_emailPassword" ><br><br>
+
+		
+
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">	
+		<a href="account.html"><button type="button" >Close</button></a>
+        
+	</form>
+</div>
+
+<script>
+function compare_input(){
+  var f_input=document.getElementById('currentemail').value;
+  var s_input=document.getElementById('newemail').value;
+  if(f_input===s_input){
+     alert('Current and New Email Id are same ');
+  }
+}
+
+
+
+
+</script> 
+
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Home</title>
+<head>
+ <meta charset="utf-8">
+ <meta id="testViewport" name="viewport" content="width=device-width, initial-scale=0.34">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="cs1.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  <script src="js1.js"></script>
+
+ <style>
+ *{
+ box-sizing:border-box;
+ }
+ .mainmenu{
+ z-index:1;
+ background:#2c2c54;
+ height:80px;
+ }
+
+.wrapper2{
+  margin-top:50px;
+  width: 970px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: flex;
+  }
+.wrapper2 .card2{
+  position:relative;
+  background: #fff;
+  width: calc(33% - 20px);
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+ 
+ .wrapper2 .divc1{
+ margin-left:3px;
+ width:calc(5% - 0px);
+ height:102px;
+ margin-top:2px;
+ border-radius: 5px;
+ margin-bottom:2px;
+ background:#acc3a6;
+}
+ 
+.card .text{
+  font-size: 20px;
+  font-weight: 600;
+}
+  .wrapper{
+  margin-top:200px;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .card{
+
+  background: #fff;
+  width: calc(33% - 20px);
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper .card .circle{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  cursor: default;
+}
+.card .circle .box,
+.card .circle .box span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.card .circle .box{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.2s;
+}
+.card .circle:hover .box{
+  transform: translate(-50%, -50%) scale(0.91);
+}
+.card .circle .box span,
+.wrapper .card .text{
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.circle .box span{
+  font-size: 38px;
+  font-family: sans-serif;
+  font-weight: 600;
+  transform: translate(-45%, -45%);
+  transition: all 0.1s;
+}
+.card .circle:hover .box span{
+  transform: translate(-45%, -45%) scale(1.09);
+}
+.card .text{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menu1{
+margin-left:110px;
+font-weight:bold;
+font-size:20px;
+}
+
+.logo{
+position:relative;
+left:100px;
+top:0px;
+}
+
+ @media(min-width: 770px) and (max-width: 1300px){
+ 
+  .menu1{
+  margin-left:0px;
+  }
+  }
+
+ 
+
+  
+ </style>
+</head>
+
+<body class="anim1" style="height:1400px;background:#f6f6f9;overflow-x:hidden;">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top mainmenu">
+  <a class="navbar-brand ml-3 rounded-circle bg-white text-dark pl-4 pr-4" style="font-weight:bold;font-size:40px;cursor:pointer;" onclick="openNav()" href="#">A</a>
+   <ul class="navbar-nav nav-tabs" role="tablist" style="border-bottom:0px">
+    <li class="nav-item ml-5 l1">
+      <a class="nav-link bg-transparent menu1 active" data-toggle="tab" href="home.html" style="padding-left:45px;padding-right:45px;color:#ffffff;border: 1px solid #ffffff;background:transparent;">Home</a>
+    </li>
+    <li class="nav-item ml-5 l1">
+      <a class="nav-link bg-transparent menu1" data-toggle="tab" href="class work.html" style="padding-left:45px;padding-right:45px;color:#ffffff;">Class Work</a>
+    </li>
+	    <li class="nav-item ml-5 l1">
+      <a class="nav-link bg-transparent menu1" data-toggle="tab" href="schedule.html" style="padding-left:45px;padding-right:45px;color:#ffffff;">Schedule</a>
+    </li>
+  </ul>
+  <span class="navbar-brand logo">
+   <img src="https://i.imgur.com/4RHFSoI.jpg" width="86px" height="80px">
+  </span>
+</nav>
+<div id="mySidenav" class="sidenav">
+<div class="div1"></div>
+<div class="div3"></div>
+<div class="div2"><span class="spn55" id="name55">name</span></div>
+<span style="position:absolute;left:1px;top:0px;">
+  </span>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top:0px;border: 0px solid #ffffff;">&times;</a>
+  <a href="account.html" style="position: relative; top:330px"><span class="fa fa-user" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account</a>
+  <a href="#" style="position: relative; top:360px"><span class="fa fa-id-card" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us</a>
+   <a href="version.html" style="position: relative; top:390px"><span class="fa fa-external-link" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version</a>
+  <a href="javascript:void(0)" onclick="logOut()" style="position: relative; top:420px"><span class=" fa fa-sign-out" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log out</a>
+ 
+
+</div>
+
+<div class="wrapper container-fluid">
+      <div class="card">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">Overall</div>
+        <div class="text" style="position:absolute;top:0px">Attendance</div>
+      </div>
+      <div class="card js">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">This Month</div>
+         <div class="text" style="position:absolute;top:0px">Attendance</div>
+      </div>
+      <div class="card react">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">This Week</div>
+         <div class="text" style="position:absolute;top:0px">Attendance</div>
+      </div>
+    </div>
+
+	<div class="wrapper2 container-fluid">
+	
+	<div class="card2" style="width: calc(100% - 0px);height: 100px;">
+	<div class="divc1"></div>
+	<b style="z-index:3;position:absolute;top:0px;left:410px;font-size:20px;text-align:center;"><a href="class work.html"style="color:black">Update /feeds</a></b>
+		<p id="s1" style="position:absolute;z-index:2;margin-left:60px;margin-top:40px;width:870px;text-align:center;">No Message</p></div>
+	
+	
+	<div class="card2" style=" width: calc(100% - 0px);height: 100px;margin-top:10px">
+	<div class="divc1" style="background:#ff2c55;"></div>
+	<b style="z-index:3;position:absolute;top:0px;left:410px;font-size:20px;text-align:center;"><a href="class work.html"style="color:black">Update /feeds</a></b>
+		<p id="s2" style="position:absolute;z-index:2;margin-left:60px;margin-top:40px;width:870px;text-align:center;">No Message</p></div>
+		
+	<div class="card2" style=" width: calc(100% - 0px);height: 100px;margin-top:10px;">
+		<div class="divc1" style="background:e9d985;"></div>
+	<b style="z-index:3;position:absolute;top:0px;left:410px;font-size:20px;text-align:center;"><a href="class work.html"style="color:black">Update /feeds</a></b>
+		<p id="s3" style="position:absolute;z-index:2;margin-left:60px;margin-top:40px;width:870px;text-align:center;">No Message</p></div>
+		
+	<div class="card2" style=" width: calc(100% - 0px);height: 100px;margin-top:10px;">
+		<div class="divc1" style="background:#009788;"></div>
+	<b style="z-index:3;position:absolute;top:0px;left:410px;font-size:20px;text-align:center;"><a href="class work.html"style="color:black">Update /feeds</a></b>
+		<p id="s4" style="position:absolute;z-index:2;margin-left:60px;margin-top:40px;width:870px;text-align:center;">No Message</p></div>
+		
+	<div class="card2" style=" width: calc(100% - 0px);height: 100px;margin-top:10px;">
+		<div class="divc1" style="background:#ff9c00;"></div>
+	<b style="z-index:3;position:absolute;top:0px;left:410px;font-size:20px;text-align:center;"><a href="class work.html"style="color:black">Update /feeds</a></b>
+		<p id="s5" style="position:absolute;z-index:2;margin-left:60px;margin-top:40px;width:870px;text-align:center;">No Message</p></div>
+	</div>
+
+
+
+        
+     <script>
+      let options = {
+        startAngle: -1.55,
+        size: 150,
+        value: 0.8,
+        fill: {gradient: ['#a445b2', '#fa4299']}
+      }
+      $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+      function(event, progress, stepValue){
+        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+      });
+      $(".js .bar").circleProgress({
+        value: 0.9
+      });
+      $(".react .bar").circleProgress({
+        value: 0.99
+      });
+    </script>
+		 
+		 
+		 
+
+</body>
+</html>

@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Class Work</title>
+<head>
+ <meta charset="utf-8">
+ <meta id="testViewport" name="viewport" content="width=device-width, initial-scale=0.34">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="cs1.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <script src="js1.js"></script>
+		 
+<style>
+	 *{
+ box-sizing:border-box;
+ }
+ .mainmenu{
+ z-index:1;
+ background:#2c2c54;
+ height:80px;
+ } 
+
+.wrapper{
+  margin-top:150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: space-evenly;
+  }
+
+.wrapper .card{
+  background: #fff;
+  width: calc(30% - 20px);
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper .card2{
+position:absolute;
+top:0px;
+  background: #fff;
+  width: calc(100% - 0px);
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+
+
+
+/*attendance*/
+
+.attend{
+position:absolute;
+top:200px:
+left:200px;
+width:500px;
+height:500px;
+background-color:lightblue;
+box-shadow: 2px 2px 3px #999;
+display:none;
+
+}
+
+.float2{
+	position:absolute;
+	width:60px;
+	height:60px;
+	top:400px;
+	left:30px;
+	background-color:#F33;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	z-index:10;
+	
+}
+
+/*assignment*/
+.clswrk{
+position:absolute;
+top:10px;
+left:10px;
+height:680px;
+width:880px;
+box-shadow: 2px 2px 3px #999;
+background:rgb(255,230,230);
+display:none;
+}
+
+.tw{position:absolute;
+top:40px;
+left:200px;
+height:400px;
+width:500px;
+box-shadow: 2px 2px 3px #999;
+background:lightblue;
+display:none;
+
+
+
+}
+
+.label-container{
+	position:absolute;
+	top:255px;
+	right:50px;
+	display:table;
+	visibility:hidden;
+}
+
+
+.label-text{
+	color:#FFF;
+	background:rgba(51,51,51,0.5);
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	border-radius:3px;
+	position:relative;
+	top:2px;
+}
+
+.label-arrow{
+	display:table-cell;
+	vertical-align:middle;
+	color:#333;
+	opacity:0.5;
+}
+
+
+.float{
+	position:absolute;
+	width:60px;
+	height:60px;
+	top:400px;
+	right:30px;
+	background-color:#F33;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	z-index:10;
+}
+
+
+
+/*attendance*/
+.label-container{
+	position:absolute;
+	top:255px;
+	right:50px;
+	display:table;
+	visibility:hidden;
+}
+
+
+.label-text{
+	color:#FFF;
+	background:rgba(51,51,51,0.5);
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	border-radius:3px;
+	position:relative;
+	top:2px;
+}
+
+.label-arrow{
+	display:table-cell;
+	vertical-align:middle;
+	color:#333;
+	opacity:0.5;
+}
+
+
+.float{
+	position:absolute;
+	width:60px;
+	height:60px;
+	top:400px;
+	right:30px;
+	background-color:#F33;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	z-index:10;
+}
+
+.u1{
+	position:absolute;
+	right:30px;
+	padding-bottom:20px;
+	top:255px;
+	z-index:100;
+	visibility:hidden;
+}
+
+.u1 .l1{
+	list-style:none;
+	margin-bottom:10px;
+}
+
+.u1 .l1 .a9{
+	background-color:#F33;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	width:60px;
+	height:60px;
+	display:block;
+}
+
+.u1:active{
+	visibility:visible!important;
+	opacity:1!important;
+}
+
+
+.my-float{
+	font-size:24px;
+	margin-top:18px;
+}
+
+a#menu-share + .u1{
+  visibility: hidden;
+  
+}
+
+
+a#menu-share i{
+	animation: rotate-in 0.5s;
+}
+
+a#menu-share:hover > i{
+	animation: rotate-out 0.5s;
+}
+
+@keyframes scale-in {
+    from {transform: scale(0);opacity: 0;}
+    to {transform: scale(1);opacity: 1;}
+}
+
+@keyframes rotate-in {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes rotate-out {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+}
+/*menu*/
+.menu1{
+margin-left:110px;
+font-weight:bold;
+font-size:20px;
+}
+
+.logo{
+position:relative;
+left:100px;
+top:0px;
+}
+
+.s1:hover{color:#cbcbdd;}
+
+.s1{position:relative;left:140px;top:0px;font-size:35px;}
+
+.b2{position:relative;left:-150px; top:0px;font-size:25px;}
+
+
+
+.c1:hover, .c2:hover, .c3:hover, .c4:hover, .c5:hover{cursor:pointer;background-color:#ffffef !important;}
+
+.cc1{position:absolute;
+top:0px; !important;
+left:180px;
+width:30px; 
+height:30px;
+border-radius:100px;
+font-size:40px;
+color:black;
+
+}
+.cc1:hover{color:#cbcbdd !important;}
+
+ @media(min-width: 770px) and (max-width: 1300px){
+ 
+  .menu1{
+  margin-left:0px;
+  }
+  .b2{
+  left:-90px;
+ 
+  }
+   .s1{
+  left:80px;
+  }
+  .cc1{
+  left:120px;
+  }
+  }
+
+
+
+	 </style>
+	 <body class="anim1" style="height:1400px;background:#f6f6f9;overflow-x:hidden;">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top mainmenu">
+  <a class="navbar-brand ml-3 rounded-circle bg-white text-dark pl-4 pr-4" style="font-weight:bold;font-size:40px;cursor:pointer;" onclick="openNav()" href="#">A</a>
+   <ul class="navbar-nav nav-tabs" role="tablist" style="border-bottom:0px">
+    <li class="nav-item ml-5 l1">
+      <a class="nav-link bg-transparent menu1" data-toggle="tab" href="home.html" style="padding-left:45px;padding-right:45px;color:#ffffff;">Home</a>
+    </li>
+    <li class="nav-item ml-5 l1">
+      <a class="nav-link bg-transparent menu1 active" data-toggle="tab" href="class work.html" style="padding-left:45px;padding-right:45px;color:#ffffff;border: 1px solid #ffffff;background:transparent;">Class Work</a>
+    </li>
+	    <li class="nav-item ml-5 l1">
+      <a class="nav-link bg-transparent menu1" data-toggle="tab" href="schedule.html" style="padding-left:45px;padding-right:45px;color:#ffffff;">Schedule</a>
+    </li>
+  </ul>
+  <span class="navbar-brand logo">
+   <img src="https://i.imgur.com/4RHFSoI.jpg" width="86px" height="80px">
+  </span>
+</nav>
+<div id="mySidenav" class="sidenav">
+<div class="div1"></div>
+<div class="div3"></div>
+<div class="div2"><span class="spn55" id="name55">name</span></div>
+<span style="position:absolute;left:1px;top:0px;">
+  </span>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top:0px;border: 0px solid #ffffff;">&times;</a>
+  <a href="account.html" style="position: relative; top:330px"><span class="fa fa-user" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account</a>
+  <a href="#" style="position: relative; top:360px"><span class="fa fa-id-card" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us</a>
+   <a href="version.html" style="position: relative; top:390px"><span class="fa fa-external-link" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version</a>
+  <a href="javascript:void(0)" onclick="logOut()" style="position: relative; top:420px"><span class=" fa fa-sign-out" style="position:absolute;top:0px;font-size:65px" ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log out</a>
+ 
+
+</div>
+
+<div class="wrapper container-fluid">
+      <div class="subj1 card container" style="cursor:pointer;">
+	   <div class="card2" style="background:#acc3a6;">
+	   <b style="position:relative;top:0px;font-size:20px;">Web Programming</b>
+	  </div><br><br>
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	   
+	   <div class="subj2 card container" style="cursor:pointer;">
+	   <div class="card2" style="background:#ff2c55;">
+	   <b style="position:relative;top:0px;font-size:20px;">Android Programming</b>
+	  </div><br><br>
+	    <p id="s2as1">1</p>
+	    <p id="s2as2">2</p>
+	    <p id="s2as3">3</p>
+	  </div>
+	   
+	   <div class="subj3 card container" style="cursor:pointer;">
+	   <div class="card2" style="background:#e9d985;">
+	   <b style="position:relative;top:0px;font-size:20px;">Database Management Sysytem</b>
+	   </div><br><br>
+	    <p id="s3as1">1</p>
+	    <p id="s3as2">2</p>
+	    <p id="s3as3">3</p>
+	  </div>
+	     
+		 <div class="subj4 card container" style="relative:absolute;top:30px;cursor:pointer;">
+	   <div class="card2" style="background:#009788;">
+	   <b style="position:relative;top:0px;font-size:20px;">Applied Mathematics</b>
+	   </div><br><br>
+	    <p id="s4as1">1</p>
+	    <p id="s4as2">2</p>
+	    <p id="s4as3">3</p>
+	  </div>
+	  
+	     <div class="subj5 card container" style="relative:absolute;top:30px;cursor:pointer;">
+	   <div class="card2" style="background:#ff9c00;">
+	   <b style="position:relative;top:0px;font-size:20px;">Software Engineering</b>
+	  </div><br><br>
+	    <p id="s5as1">asss1</p>
+	    <p id="s5as2">ass2</p>
+	    <p id="s5as3">ass3</p>
+	  </div>
+	  </div>
+	  
+	  <div class="sub1 wrapper container-fluid" style="display:none">
+        <div class="card container" style="width: calc(70% - 20px);height:700px;background:lightpink;">
+	   <div class="card2" style="background:#acc3a6;height: 120px;">
+	   <b style="position:relative;top:0px;font-size:40px;">Web Programming</b>
+	  </div><br><br>
+	   <div class="card2" style="background:#ffffff;height: 60px;top: 150px;border-radius:100px;flex-wrap:wrap;">
+	   <b class="b2">Assignment</b>
+	   <span class="fa fa-paperclip s1"span>
+	   </div>
+	      <a href="#" onclick="visbl()" class="float" id="menu-share">
+<i class="fa fa-edit my-float assign"></i>
+</a>
+
+<div class="clswrk cw1">
+<center>
+<h1>To do Work</h1><br>
+<p name="wpassign1" style="cursor:pointer;" onclick="wpvisbl1()">1</p><br>
+<p name="wpassign2" style="cursor:pointer;" onclick="wpvisbl2()">2</p><br>
+<p name="wpassign3" style="cursor:pointer;" onclick="wpvisbl3()">3</p><br>
+<p name="wpassign4" style="cursor:pointer;" onclick="wpvisbl4()">4</p><br>
+<p name="wpassign5" style="cursor:pointer;" onclick="wpvisbl5()">5</p><br>
+</center>
+</div>
+<div class="tw wptdw1">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="wpassindtl1">Assignment Details</p>
+<a href="#" class="wpassinlink1">Assignment 1</a><br><br>
+<form name="wpmyassin1" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork1" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</form>
+</center>
+</div>
+<div class=" tw wptdw2">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="wpassindtl2">Assignment Details</p>
+<a href="#" class="wpassinlink2">Assignment 2</a><br><br>
+<form name="wpmyassin2" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork2" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw wptdw3">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="wpassindtl3">Assignment Details</p>
+<a href="#" class="wpassinlink3">Assignment 3</a><br><br>
+<form name="wpmyassin3" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork3" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw wptdw4">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="wpassindtl4">Assignment Details</p>
+<a href="#" class="wpassinlink4">Assignment 4</a><br><br>
+<form name="wpmyassin4" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork4" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw wptdw5">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="wpassindtl5">Assignment Details</p>
+<a href="#" class="wpassinlink5">Assignment 5</a><br><br>
+<form name="wpmyassin5" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork5" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+	   <a href="#" onclick="attend()" class="float2" id="menu-share">
+<i class="fa fa-link my-float"></i>
+</a>
+	   <div class="attend attn1">
+	   <center>
+	   <h1>Attendance Form</h1>
+	   <form name="f1" method="post">
+	   Roll no.: <input type="text" name="rollno1" required><br><br>
+	   Name: <input type="text" name="name1" required><br><br>
+	   Student ID: <input type="text" name="studentid1" required><br><br>
+	   Class ID: <input type="text" name="classid1" required><br><br>
+	   Status: <input type="text" name="status" readonly value="Present"><br><br>
+	   Attendance Time: <input type="datetime-local" name="attntime1" required><br><br>
+	   <input type="submit" name=submitattn1" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" name="reset1" value="Reset">
+	   </center>
+	   </form>
+	   </div>
+	 
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	  </div>
+	  
+	    <div class="sub2 wrapper container-fluid" style="display:none">
+        <div class="card container" style="width: calc(70% - 20px);height:700px;background:lightpink;">
+	   <div class="card2" style="background:#ff2c55;height: 120px;">
+	   <b style="position:relative;top:0px;font-size:40px;">Android Programming</b>
+	  </div><br><br>
+	   <div class="card2" style="background:#ffffff;height: 60px;top: 150px;border-radius:100px;flex-wrap:wrap;">
+	   <b class="b2">Assignment</b>
+	   <span class="fa fa-paperclip s1"span>
+	   </div>
+	   	      <a href="#" onclick="visbl()" class="float" id="menu-share">
+<i class="fa fa-edit my-float assign"></i>
+</a>
+
+<div class="clswrk cw2">
+<center>
+<h1>To do Work</h1><br>
+<p name="apassign1" style="cursor:pointer;" onclick="wpvisbl1()">1</p><br>
+<p name="apassign2" style="cursor:pointer;" onclick="wpvisbl2()">2</p><br>
+<p name="apassign3" style="cursor:pointer;" onclick="wpvisbl3()">3</p><br>
+<p name="apassign4" style="cursor:pointer;" onclick="wpvisbl4()">4</p><br>
+<p name="apassign5" style="cursor:pointer;" onclick="wpvisbl5()">5</p><br>
+</center>
+</div>
+<div class="tw aptdw1">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="apassindtl1">Assignment Details</p>
+<a href="#" class="apassinlink1">Assignment 1</a><br><br>
+<form name="apmyassin1" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork1" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class=" tw aptdw2">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="apassindtl2">Assignment Details</p>
+<a href="#" class="apassinlink2">Assignment 2</a><br><br>
+<form name="apmyassin2" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork2" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw aptdw3">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="apassindtl3">Assignment Details</p>
+<a href="#" class="apassinlink3">Assignment 3</a><br><br>
+<form name="apmyassin3" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork3" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw aptdw4">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="apassindtl4">Assignment Details</p>
+<a href="#" class="apassinlink4">Assignment 4</a><br><br>
+<form name="apmyassin4" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork4" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw aptdw5">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="apassindtl5">Assignment Details</p>
+<a href="#" class="apassinlink5">Assignment 5</a><br><br>
+<form name="apmyassin5" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork5" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+	   	   <a href="#" onclick="attend()" class="float2" id="menu-share">
+<i class="fa fa-link my-float"></i>
+</a>
+	   	   <div class="attend attn2">
+		   <center>
+	   <h1>Attendance Form</h1>
+	   <form name="f2" method="post">
+	   Roll no.: <input type="text" name="rollno2" required><br><br>
+	   Name: <input type="text" name="name2" required><br><br>
+	   Student ID: <input type="text" name="studentid2" required><br><br>
+	   Class ID: <input type="text" name="classid2" required><br><br>
+	   Status: <input type="text" name="status" readonly value="Present"><br><br>
+	   Attendance Time: <input type="datetime-local" name="attntime2" required><br><br>
+	   <input type="submit" name=submitattn2" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" name="reset2" value="Reset">
+	   </center>
+	   </form>
+	   </div>
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	  </div>
+	  
+	    <div class="sub3 wrapper container-fluid" style="display:none">
+        <div class="card container" style="width: calc(70% - 20px);height:700px;background:lightpink;">
+	   <div class="card2" style="background:#e9d985;height: 120px;">
+	   <b style="position:relative;top:0px;font-size:40px;">Database Management Sysytem</b>
+	  </div><br><br>
+	   <div class="card2" style="background:#ffffff;height: 60px;top: 150px;border-radius:100px;flex-wrap:wrap;">
+	   <b class="b2">Assignment</b>
+	   <span class="fa fa-paperclip s1"span>
+	   </div>
+	   	      <a href="#" onclick="visbl()" class="float" id="menu-share">
+<i class="fa fa-edit my-float assign"></i>
+</a>
+
+<div class="clswrk cw3">
+<center>
+<h1>To do Work</h1><br>
+<p name="dbassign1" style="cursor:pointer;" onclick="wpvisbl1()">1</p><br>
+<p name="dbassign2" style="cursor:pointer;" onclick="wpvisbl2()">2</p><br>
+<p name="dbassign3" style="cursor:pointer;" onclick="wpvisbl3()">3</p><br>
+<p name="dbassign4" style="cursor:pointer;" onclick="wpvisbl4()">4</p><br>
+<p name="dbassign5" style="cursor:pointer;" onclick="wpvisbl5()">5</p><br>
+</center>
+</div>
+<div class="tw dbtdw1">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="dbassindtl1">Assignment Details</p>
+<a href="#" class="dbassinlink1">Assignment 1</a><br><br>
+<form name="dbmyassin1" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork1" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class=" tw dbtdw2">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="dbassindtl2">Assignment Details</p>
+<a href="#" class="dbassinlink2">Assignment 2</a><br><br>
+<form name="dbmyassin2" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork2" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw dbtdw3">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="dbassindtl3">Assignment Details</p>
+<a href="#" class="dbassinlink3">Assignment 3</a><br><br>
+<form name="dbmyassin3" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork3" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw dbtdw4">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="dbassindtl4">Assignment Details</p>
+<a href="#" class="dbassinlink4">Assignment 4</a><br><br>
+<form name="dbmyassin4" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork4" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw dbtdw5">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="dbassindtl5">Assignment Details</p>
+<a href="#" class="dbassinlink5">Assignment 5</a><br><br>
+<form name="dbmyassin5" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork5" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+	   	   <a href="#" onclick="attend()" class="float2" id="menu-share">
+<i class="fa fa-link my-float"></i>
+</a>
+	   	   <div class="attend attn3">
+		   <center>
+	   <h1>Attendance Form</h1>
+	   <form name="f3" method="post">
+	   Roll no.: <input type="text" name="rollno3" required><br><br>
+	   Name: <input type="text" name="name3" required><br><br>
+	   Student ID: <input type="text" name="studentid3" required><br><br>
+	   Class ID: <input type="text" name="classid3" required><br><br>
+	   Status: <input type="text" name="status" readonly value="Present"><br><br>
+	   Attendance Time: <input type="datetime-local" name="attntime3" required><br><br>
+	   <input type="submit" name=submitattn3" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" name=reset" value="Reset">
+	   </center>
+	   </form>
+	   </div>
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	  </div>
+	  
+	    <div class="sub4 wrapper container-fluid" style="display:none">
+        <div class="card container" style="width: calc(70% - 20px);height:700px;background:lightpink;">
+	   <div class="card2" style="background:#009788;height: 120px;">
+	   <b style="position:relative;top:0px;font-size:40px;">Applied Mathematics</b>
+	  </div><br><br>
+	   <div class="card2" style="background:#ffffff;height: 60px;top: 150px;border-radius:100px;flex-wrap:wrap;">
+	   <b class="b2">Assignment</b>
+	   <span class="fa fa-paperclip s1"span>
+	   </div>
+	   	      <a href="#" onclick="visbl()" class="float" id="menu-share">
+<i class="fa fa-edit my-float assign"></i>
+</a>
+
+<div class="clswrk cw4">
+<center>
+<h1>To do Work</h1><br>
+<p name="amassign1" style="cursor:pointer;" onclick="wpvisbl1()">1</p><br>
+<p name="amassign2" style="cursor:pointer;" onclick="wpvisbl2()">2</p><br>
+<p name="amassign3" style="cursor:pointer;" onclick="wpvisbl3()">3</p><br>
+<p name="amassign4" style="cursor:pointer;" onclick="wpvisbl4()">4</p><br>
+<p name="amassign5" style="cursor:pointer;" onclick="wpvisbl5()">5</p><br>
+</center>
+</div>
+<div class="tw amtdw1">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="amassindtl1">Assignment Details</p>
+<a href="#" class="amassinlink1">Assignment 1</a><br><br>
+<form name="ammyassin1" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork1" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class=" tw amtdw2">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="amassindtl2">Assignment Details</p>
+<a href="#" class="amassinlink2">Assignment 2</a><br><br>
+<form name="ammyassin2" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork2" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw amtdw3">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="amassindtl3">Assignment Details</p>
+<a href="#" class="amassinlink3">Assignment 3</a><br><br>
+<form name="ammyassin3" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork3" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw amtdw4">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="amassindtl4">Assignment Details</p>
+<a href="#" class="amassinlink4">Assignment 4</a><br><br>
+<form name="ammyassin4" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork4" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw amtdw5">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="amassindtl5">Assignment Details</p>
+<a href="#" class="amassinlink5">Assignment 5</a><br><br>
+<form name="ammyassin5" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork5" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+	   	   <a href="#" onclick="attend()" class="float2" id="menu-share">
+<i class="fa fa-link my-float"></i>
+</a>
+	   	   <div class="attend attn4">
+		   <center>
+	   <h1>Attendance Form</h1>
+	   <form name="f4" method="post">
+	   Roll no.: <input type="text" name="rollno4" required><br><br>
+	   Name: <input type="text" name="name" required><br><br>
+	   Student ID: <input type="text" name="studentid4"required><br><br>
+	   Class ID: <input type="text" name="classid4" required><br><br>
+	   Status: <input type="text" name="status" readonly value="Present"><br><br>
+	   Attendance Time: <input type="datetime-local" name="attntime4" required><br><br>
+	   <input type="submit" name=submitattn4" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" name="reset4" value="Reset">
+	   </center>
+	   </form>
+	   </div>
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	  </div>
+	  
+	    <div class="sub5 wrapper container-fluid" style="display:none">
+        <div class="card container" style="width: calc(70% - 20px);height:700px;background:lightpink;">
+	   <div class="card2" style="background:#ff9c00;height: 120px;">
+	   <b style="position:relative;top:0px;font-size:40px;">Software Engineering</b>
+	  </div><br><br>
+	   <div class="card2" style="background:#ffffff;height: 60px;top: 150px;border-radius:100px;flex-wrap:wrap;">
+	   <b class="b2">Assignment</b>
+	   <span class="fa fa-paperclip s1"span>
+	   </div>
+	   	      <a href="#" onclick="visbl()" class="float" id="menu-share">
+<i class="fa fa-edit my-float assign"></i>
+</a>
+
+<div class="clswrk cw5">
+<center>
+<h1>To do Work</h1><br>
+<p name="seassign1" style="cursor:pointer;" onclick="wpvisbl1()">1</p><br>
+<p name="seassign2" style="cursor:pointer;" onclick="wpvisbl2()">2</p><br>
+<p name="seassign3" style="cursor:pointer;" onclick="wpvisbl3()">3</p><br>
+<p name="seassign4" style="cursor:pointer;" onclick="wpvisbl4()">4</p><br>
+<p name="seassign5" style="cursor:pointer;" onclick="wpvisbl5()">5</p><br>
+</center>
+</div>
+<div class="tw setdw1">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="seassindtl1">Assignment Details</p>
+<a href="#" class="seassinlink1">Assignment 1</a><br><br>
+<form name="semyassin1" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork1" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class=" tw setdw2">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="seassindtl2">Assignment Details</p>
+<a href="#" class="seassinlink2">Assignment 2</a><br><br>
+<form name="semyassin2" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork2" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw setdw3">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="seassindtl3">Assignment Details</p>
+<a href="#" class="seassinlink3">Assignment 3</a><br><br>
+<form name="semyassin3" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork3" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw setdw4">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="seassindtl4">Assignment Details</p>
+<a href="#" class="seassinlink4">Assignment 4</a><br><br>
+<form name="semyassin4" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork4" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+<div class="tw setdw5">
+<a href="#" style="position:relative;top:0px;left:460px;font-size:40px;text-decoration:none;" onclick="close1()">&times;</a><br><br>
+<center>
+<p class="seassindtl5">Assignment Details</p>
+<a href="#" class="seassinlink5">Assignment 5</a><br><br>
+<form name="semyassin5" method="post">
+Roll no.:  <input type="text" name="roll no" required><br><br>
+Name:      <input type="text" name="name" required><br><br>
+File: <input type="file" name="assinwork5" required><br><br>
+<input type="submit" name="myassinsbmt" value="Submit">
+</center>
+</form>
+</div>
+	   	   <a href="#" onclick="attend()" class="float2" id="menu-share">
+<i class="fa fa-link my-float"></i>
+</a>
+	   	   <div class="attend attn5">
+		   <center>
+	   <h1>Attendance Form</h1>
+	   <form name="f5" method="post">
+	   Roll no.: <input type="text" name="rollno5" required><br><br>
+	   Name: <input type="text" name="name5" required><br><br>
+	   Student ID: <input type="text" name="studentid5" required><br><br>
+	   Class ID: <input type="text" name="classid5" required><br><br>
+	   Status: <input type="text" name="status" readonly value="Present"><br><br>
+	   Attendance Time: <input type="text" name="attntime5" required><br><br>
+	   <input type="submit" name=submitattn5" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" name="reset5" value="Reset">
+	   </center>
+	   </form>
+	   </div>
+	  <p id="s1as1">1</p>
+	  <p id="s1as2">2</p>
+	  <p id="s1as3">3</p>
+	  </div>
+	  </div>
+	  
+	  <div class="slt wrapper container-fluid" style="position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:none;">
+	  <a href="class work.html" class="cc1" style="text-decoration:none;"><b>&times;</b></a>
+	  <div class="c1 card container" style="position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:#acc3a6;"></div></a>
+	  <div class="c2 card container" style="position:relative;top:170px;width:80px;height:80px;border-radius:100px;background:#ff2c55;"></div>
+	  <div class="c3 card container" style="position:relative;top:190px;width:80px;height:80px;border-radius:100px;background:#e9d985;"></div>
+	  <div class="c4 card container" style="position:relative;top:210px;width:80px;height:80px;border-radius:100px;background:#009788;"></div>
+	  <div class="c5 card container" style="position:relative;top:230px;width:80px;height:80px;border-radius:100px;background:#ff9c00;"></div>
+	  </div>
+	  <script language="javascript">
+	  var c1=document.querySelector('.c1');
+	  var c2=document.querySelector('.c2');
+	  var c3=document.querySelector('.c3');
+	  var c4=document.querySelector('.c4');
+	  var c5=document.querySelector('.c5');
+	  var sub1=document.querySelector('.sub1');
+	  var sub2=document.querySelector('.sub2');
+	  var sub3=document.querySelector('.sub3');
+	  var sub4=document.querySelector('.sub4');
+	  var sub5=document.querySelector('.sub5');
+	  var wrapper=document.querySelector('.wrapper');
+	  var selector=document.querySelector('.slt');
+	  var subj1=document.querySelector('.subj1');
+	  var subj2=document.querySelector('.subj2');
+	  var subj3=document.querySelector('.subj3');
+	  var subj4=document.querySelector('.subj4');
+	  var subj5=document.querySelector('.subj5');
+	  
+	  subj1.addEventListener('click',function(){
+	  wrapper.setAttribute('style','display:none');
+	  sub1.setAttribute('style','display:block;');
+	  selector.setAttribute('style','position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:block;');
+	  c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  })
+	   subj2.addEventListener('click',function(){
+	  wrapper.setAttribute('style','display:none');
+	  sub2.setAttribute('style','display:block;');
+	  selector.setAttribute('style','position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:block;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  })
+	   subj3.addEventListener('click',function(){
+	  wrapper.setAttribute('style','display:none');
+	  sub3.setAttribute('style','display:block;');
+	  selector.setAttribute('style','position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:block;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  })
+	   subj4.addEventListener('click',function(){
+	  wrapper.setAttribute('style','display:none');
+	  sub4.setAttribute('style','display:block;');
+	  selector.setAttribute('style','position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:block;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  }) 
+	  subj5.addEventListener('click',function(){
+	  wrapper.setAttribute('style','display:none');
+	  sub5.setAttribute('style','display:block;');
+	  selector.setAttribute('style','position:absolute;top:0px;background:transparent;width: calc(17% - 20px);height:700px;display:block;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  })
+	  
+	  c1.addEventListener("click",function(){
+	  c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:#ff2c55;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:#e9d985;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:#009788;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:#ff9c00;');
+	  
+	  function setting(){
+	  sub1.setAttribute('style','display:block;');
+	  sub2.setAttribute('style','display:none;');
+	  sub3.setAttribute('style','display:none;');
+	  sub4.setAttribute('style','display:none;');
+	  sub5.setAttribute('style','display:none;');
+	  }
+	  setting();
+	  })
+	  
+	   c2.addEventListener("click",function(){
+	   c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:#acc3a6;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:#e9d985;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:#009788;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:#ff9c00;');
+	  
+	  function setting(){
+	  sub1.setAttribute('style','display:none;');
+	  sub2.setAttribute('style','display:block;');
+	  sub3.setAttribute('style','display:none;');
+	  sub4.setAttribute('style','display:none;');
+	  sub5.setAttribute('style','display:none;');
+	  }
+	  setting();
+	  })
+	  
+	   c3.addEventListener("click",function(){
+      c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:#acc3a6;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:#ff2c55;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:#009788;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:#ff9c00;');
+	  
+	  function setting(){
+	  sub1.setAttribute('style','display:none;');
+	  sub2.setAttribute('style','display:none;');
+	  sub3.setAttribute('style','display:block;');
+	  sub4.setAttribute('style','display:none;');
+	  sub5.setAttribute('style','display:none;');
+	  }
+	  setting();
+	  })
+	  
+	   c4.addEventListener("click",function(){
+	    c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:#acc3a6;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:#ff2c55;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:#e9d985;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:#ff9c00;');
+	  
+	  function setting(){
+	  sub1.setAttribute('style','display:none;');
+	  sub2.setAttribute('style','display:none;');
+	  sub3.setAttribute('style','display:none;');
+	  sub4.setAttribute('style','display:block;');
+	  sub5.setAttribute('style','display:none;');
+	  }
+	  setting();
+	  })
+	  
+	   c5.addEventListener("click",function(){
+	   c1.setAttribute('style','position:relative;top:150px;width:80px;height:80px;border-radius:100px;background-color:#acc3a6;');
+	  c2.setAttribute('style','position:relative;top:170px;width:80px;height:80px;border-radius:100px;background-color:#ff2c55;');
+	  c3.setAttribute('style','position:relative;top:190px;width:80px;height:80px;border-radius:100px;background-color:#e9d985;');
+	  c4.setAttribute('style','position:relative;top:210px;width:80px;height:80px;border-radius:100px;background-color:#009788;');
+	  c5.setAttribute('style','position:relative;top:230px;width:80px;height:80px;border-radius:100px;background-color:white;');
+	  
+	  function setting(){
+	  sub1.setAttribute('style','display:none;');
+	  sub2.setAttribute('style','display:none;');
+	  sub3.setAttribute('style','display:none;');
+	  sub4.setAttribute('style','display:none;');
+	  sub5.setAttribute('style','display:block;');
+	  }
+	  setting();
+	  })
+	  
+	    function attend(){
+	  var a=document.querySelector('.attn1');
+	  var b=document.querySelector('.attn2');
+	  var c=document.querySelector('.attn3');
+	  var d=document.querySelector('.attn4');
+	  var e=document.querySelector('.attn5');
+	 
+	 
+	  
+	  if(a.style.display==="none"||b.style.display==="none"||c.style.display==="none"||d.style.display==="none"||e.style.display==="none")
+	  {
+	  a.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  b.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  c.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  d.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  e.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	 
+	  }
+	  else{
+	  a.setAttribute('style','display:none!important;');
+	  b.setAttribute('style','display:none!important;');
+	  c.setAttribute('style','display:none!important;');
+	  d.setAttribute('style','display:none!important;');
+	  e.setAttribute('style','display:none!important;');
+
+	  }
+	  }
+	  
+	  function visbl(){
+	  var a=document.querySelector('.cw1');
+	  var b=document.querySelector('.cw2');
+	  var c=document.querySelector('.cw3');
+	  var d=document.querySelector('.cw4');
+	  var e=document.querySelector('.cw5');
+	  if(a.style.display==="none"||b.style.display==="none"||c.style.display==="none"||d.style.display==="none"||e.style.display==="none")
+	  {
+	  a.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  b.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  c.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  d.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  e.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  
+	  }
+	  else{
+	  a.setAttribute('style','display:none!important;');
+	  b.setAttribute('style','display:none!important;');
+	  c.setAttribute('style','display:none!important;');
+	  d.setAttribute('style','display:none!important;');
+	  e.setAttribute('style','display:none!important;');
+	  }
+	  
+	  
+	  }
+	  
+	  function wpvisbl1(){
+	    var a=document.querySelector('.wptdw1');
+	    var b=document.querySelector('.aptdw1');
+	    var c=document.querySelector('.dbtdw1');
+	    var d=document.querySelector('.amtdw1');
+	    var e=document.querySelector('.setdw1');
+	  if(a.style.display==="none"||b.style.display==="none"||c.style.display==="none"||d.style.display==="none"||e.style.display==="none")
+	  {
+	  a.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  b.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  c.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  d.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  e.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  
+	  }
+	else{
+	a.setAttribute('style','display:none!important;');
+	b.setAttribute('style','display:none!important;');
+	c.setAttribute('style','display:none!important;');
+	d.setAttribute('style','display:none!important;');
+	e.setAttribute('style','display:none!important;');
+	}
+	  }
+	  
+	  function wpvisbl2(){
+	    var a=document.querySelector('.wptdw2');
+	    var b=document.querySelector('.aptdw2');
+	    var c=document.querySelector('.dbtdw2');
+	    var d=document.querySelector('.amtdw2');
+	    var e=document.querySelector('.setdw2');
+	  if(a.style.display==="none"||b.style.display==="none"||c.style.display==="none"||d.style.display==="none"||e.style.display==="none")
+	  {
+	  a.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  b.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  c.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  d.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  e.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  
+	  }
+	else{
+	a.setAttribute('style','display:none!important;');
+	b.setAttribute('style','display:none!important;');
+	c.setAttribute('style','display:none!important;');
+	d.setAttribute('style','display:none!important;');
+	e.setAttribute('style','display:none!important;');
+	}
+	  }
+	  
+	    function wpvisbl3(){
+	    var a=document.querySelector('.wptdw3');
+	    var b=document.querySelector('.aptdw3');
+	    var c=document.querySelector('.dbtdw3');
+	    var d=document.querySelector('.amtdw3');
+	    var e=document.querySelector('.setdw3');
+	  if(a.style.display==="none"||b.style.display==="none"||c.style.display==="none"||d.style.display==="none"||e.style.display==="none")
+	  {
+	  a.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  b.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  c.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  d.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  e.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  
+	  }
+	else{
+	a.setAttribute('style','display:none!important;');
+	b.setAttribute('style','display:none!important;');
+	c.setAttribute('style','display:none!important;');
+	d.setAttribute('style','display:none!important;');
+	e.setAttribute('style','display:none!important;');
+	}
+	  }
+	  
+	    function wpvisbl4(){
+	    var a=document.querySelector('.wptdw4');
+	    var b=document.querySelector('.aptdw4');
+	    var c=document.querySelector('.dbtdw4');
+	    var d=document.querySelector('.amtdw4');
+	    var e=document.querySelector('.setdw4');
+	  if(a.style.display==="none"||b.style.display==="none"||c.style.display==="none"||d.style.display==="none"||e.style.display==="none")
+	  {
+	  a.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  b.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  c.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  d.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  e.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  
+	  }
+	else{
+	a.setAttribute('style','display:none!important;');
+	b.setAttribute('style','display:none!important;');
+	c.setAttribute('style','display:none!important;');
+	d.setAttribute('style','display:none!important;');
+	e.setAttribute('style','display:none!important;');
+	}
+	  }
+	  
+	    function wpvisbl5(){
+	    var a=document.querySelector('.wptdw5');
+	    var b=document.querySelector('.aptdw5');
+	    var c=document.querySelector('.dbtdw5');
+	    var d=document.querySelector('.amtdw5');
+	    var e=document.querySelector('.setdw5');
+	  if(a.style.display==="none"||b.style.display==="none"||c.style.display==="none"||d.style.display==="none"||e.style.display==="none")
+	  {
+	  a.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  b.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  c.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  d.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  e.setAttribute('style','display:block!important;animation: scale-in 0.5s;');
+	  
+	  }
+	else{
+	a.setAttribute('style','display:none!important;');
+	b.setAttribute('style','display:none!important;');
+	c.setAttribute('style','display:none!important;');
+	d.setAttribute('style','display:none!important;');
+	e.setAttribute('style','display:none!important;');
+	}
+	  }
+	  
+	  function close1(){
+	  var a=document.querySelector('.wptdw1');
+	  var b=document.querySelector('.wptdw2');
+	  var c=document.querySelector('.wptdw3');
+	  var d=document.querySelector('.wptdw4');
+	  var e=document.querySelector('.wptdw5');
+	   var f=document.querySelector('.aptdw1');
+	  var g=document.querySelector('.aptdw2');
+	  var h=document.querySelector('.aptdw3');
+	  var i=document.querySelector('.aptdw4');
+	  var j=document.querySelector('.aptdw5');
+	   var k=document.querySelector('.dbtdw1');
+	  var l=document.querySelector('.dbtdw2');
+	  var m=document.querySelector('.dbtdw3');
+	  var n=document.querySelector('.dbtdw4');
+	  var o=document.querySelector('.dbtdw5');
+	   var p=document.querySelector('.amtdw1');
+	  var q=document.querySelector('.amtdw2');
+	  var r=document.querySelector('.amtdw3');
+	  var s=document.querySelector('.amtdw4');
+	  var t=document.querySelector('.amtdw5'); 
+	  var u=document.querySelector('.setdw1');
+	  var v=document.querySelector('.setdw2');
+	  var w=document.querySelector('.setdw3');
+	  var x=document.querySelector('.setdw4');
+	  var y=document.querySelector('.setdw5');
+	   if(a.style.display==="block"||b.style.display==="block"||c.style.display==="block"||d.style.display==="block"||e.style.display==="block"||f.style.display==="block"||g.style.display==="block"||h.style.display==="block"||i.style.display==="block"||j.style.display==="block"||k.style.display==="block"||l.style.display==="block"||m.style.display==="block"||n.style.display==="block"||o.style.display==="block"||p.style.display==="block"||q.style.display==="block"||r.style.display==="block"||s.style.display==="block"||t.style.display==="block"||u.style.display==="block"||v.style.display==="block"||w.style.display==="block"||x.style.display==="block"||y.style.display==="block")
+	   {
+	   a.setAttribute('style','display:none!important;');
+	   b.setAttribute('style','display:none!important;');
+	   c.setAttribute('style','display:none!important;');
+	   d.setAttribute('style','display:none!important;');
+	   e.setAttribute('style','display:none!important;');
+	   f.setAttribute('style','display:none!important;');
+	   g.setAttribute('style','display:none!important;');
+	   h.setAttribute('style','display:none!important;');
+	   i.setAttribute('style','display:none!important;');
+	   j.setAttribute('style','display:none!important;');
+	   k.setAttribute('style','display:none!important;');
+	   l.setAttribute('style','display:none!important;');
+	   m.setAttribute('style','display:none!important;');
+	   n.setAttribute('style','display:none!important;');
+	   o.setAttribute('style','display:none!important;');
+	   p.setAttribute('style','display:none!important;');
+	   q.setAttribute('style','display:none!important;');
+	   r.setAttribute('style','display:none!important;');
+	   s.setAttribute('style','display:none!important;');
+	   t.setAttribute('style','display:none!important;');
+	   u.setAttribute('style','display:none!important;');
+	   v.setAttribute('style','display:none!important;');
+	   w.setAttribute('style','display:none!important;');
+	   x.setAttribute('style','display:none!important;');
+	   y.setAttribute('style','display:none!important;');
+	   }
+	   
+	  }
+	 
+	  
+	  </script>
+	</body>
+	</html>
+
